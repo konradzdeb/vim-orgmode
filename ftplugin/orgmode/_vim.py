@@ -7,7 +7,11 @@
     TODO
 """
 
-import imp
+# Work around imp module being replaced with importlib in Python 3.12
+try:
+    import importlib as imp
+except ImportError:
+    import imp
 import re
 import sys
 
